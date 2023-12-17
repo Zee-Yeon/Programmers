@@ -1,5 +1,8 @@
+
+import java.util.*;
 class Solution {
     public int[] solution(String s) {
+        /*
         String[] str = s.split("");
         int[] a = new int[str.length];
         int num = 0;
@@ -19,8 +22,8 @@ class Solution {
         }
         
         return a;
+*/        
         
-        /*
         
         int[] answer = new int[s.length()];
         HashMap<Character,Integer> map = new HashMap<>();
@@ -32,6 +35,6 @@ class Solution {
         }
         
         return answer;
-        */
+        
     }
 }
