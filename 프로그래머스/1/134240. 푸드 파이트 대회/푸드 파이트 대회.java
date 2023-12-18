@@ -33,7 +33,11 @@ class Solution {
                 answer += s[i].repeat(a[i]);
             }
         }
+        
         /*
+        Q. Integer.toString // String.valueOf() ?
+        
+        
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i < food.length; i++) {
             sb.append(Integer.toString(i).repeat(food[i] / 2));
