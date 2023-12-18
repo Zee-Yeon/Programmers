@@ -33,6 +33,13 @@ class Solution {
                 answer += s[i].repeat(a[i]);
             }
         }
+        /*
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i < food.length; i++) {
+            sb.append(Integer.toString(i).repeat(food[i] / 2));
+        }
+        return sb.toString() + "0" + sb.reverse().toString();
+        */
         
         
         return answer;
