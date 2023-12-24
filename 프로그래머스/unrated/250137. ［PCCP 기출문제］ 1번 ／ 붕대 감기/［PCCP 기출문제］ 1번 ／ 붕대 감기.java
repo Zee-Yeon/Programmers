@@ -1,19 +1,18 @@
 class Solution {
     public int solution(int[] bandage, int health, int[][] attacks) {
-        int maxHealth = health;
-        int maxTime = attacks[attacks.length-1][0];
         
-        int beforeTime = 0;
+        int maxHealth = health;
+        int beforeAttackTime = 0;
         int bandageTime = 0;
+        
         for (int[] attack : attacks) {
-            bandageTime = attack[0] - beforeTime - 1;
-            health = Math.min(maxHealth, health + (bandage[1] * bandageTime));
-            if (bandageTime / bandage[0] > 0) {
-                health = Math.min(maxHealth, health + bandage[2] * (bandageTime / bandage[0]));
-            }
+            bandageTime = attack[0] - beforeAttackTime - 1;
+            health = Math.min(maxHealth, health + 
+                             bandageTime * bandage[1] +
+                             bandageTime / bandage[0] * bandage[2]);
             
             health -= attack[1];
-            beforeTime = attack[0];
+            beforeAttackTime = attack[0];
             if (health <= 0) return -1;
         }
         
